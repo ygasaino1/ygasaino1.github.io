@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            background-color: #FFFFFF;
+        }
+        
+        #myDiv {
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        #media-catcher {
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+    <title>TK</title>
+</head>
+
+<body>
+    <div id="myDiv">
+        <iframe id=media-catcher src="" frameborder="0"></iframe>
+    </div>
+    <script>
+        var emb = window.location.search.split('open=')[1]
+        let media = document.getElementById('media-catcher');
+        media.setAttribute('src', emb);
+    </script>
+</body>
+
+</html>
