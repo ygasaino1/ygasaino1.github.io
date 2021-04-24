@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sketch</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.3.1/lib/p5.js"></script>
+    <style>
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            /* overflow: hidden; */
+        }
+        
+        #bg {
+            height: 100%;
+            width: 100%;
+            padding: 0%;
+            /* margin: 0%;
+            align-items: center;
+            justify-content: center;
+            display: flex; */
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            z-index: -1;
+        }
+        
+        #bg img {
+            height: 100%;
+            width: 100%;
+            max-width: 100vw;
+            max-height: 100vh;
+            object-fit: contain;
+            z-index: -1;
+        }
+        
+        canvas {
+            display: block;
+            z-index: 9999;
+        }
+    </style>
+</head>
+
+<body>
+    <div id='bg'>
+        <!-- <img src="bg.png" alt=""> -->
+    </div>
+    <script src="sketch.js"></script>
+</body>
+
+</html>
