@@ -19,8 +19,8 @@ function setup() {
     bg.resize(bg.width * globalScale, bg.height * globalScale);
     cnv.parent('bg');
     cnv.style('z-index', '9999');
-    textSize(15);
-    textStyle(BOLD);
+    //textSize(15);
+    //textStyle(BOLD);
 
     loc_x = width / 2;
     loc_y = height / 2;
@@ -60,7 +60,7 @@ function draw() {
         image(bday, loc_x, loc_y);
     }
     pop();
-    text("!IT'S Nicks BDay!", loc_x - 50, loc_y + 90);
+    //text("!IT'S Nicks BDay!", loc_x - 50, loc_y + 90);
 
 
 }
