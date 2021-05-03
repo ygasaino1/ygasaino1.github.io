@@ -5,6 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Francois+One&display=swap" rel="stylesheet">
+
     <style>
         body,
         html {
@@ -30,6 +35,14 @@
             width: 100%;
             overflow: hidden;
         }
+        
+        p {
+            font-size: 50px;
+            color: white;
+            font-family: 'Francois One', sans-serif;
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: black;
+        }
     </style>
     <title>TK</title>
 </head>
@@ -42,6 +55,27 @@
         var emb = window.location.search.split('open=')[1]
         let media = document.getElementById('media-catcher');
         media.setAttribute('src', emb);
+    </script>
+
+    <script>
+        let safeBorder = 100;
+        let comment = function(msg) {
+            let a = $(`<p>${msg}</p>`);
+            a.css('position', 'absolute');
+            a.css('left', window.innerWidth);
+            a.css('top', Math.random() * (window.innerHeight - safeBorder * 2));
+            a.css('white-space', 'pre');
+            a.appendTo('body');
+            // console.log(a.height()); //71.2
+            a.animate({
+                left: a.width() * -1
+            }, 5000, 'linear', function() {
+                a.remove()
+            });
+        }
+        window.addEventListener("hashchange", function() {
+            comment(decodeURI(location.hash.substring(1)));
+        }, false);
     </script>
 </body>
 
