@@ -36,13 +36,19 @@
             overflow: hidden;
         }
         
-        p {
-            padding: 0px;
-            margin: 0px;
+        p#back {
             font-size: 120px;
             color: white;
             font-family: 'Francois One', sans-serif;
-            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-width: 10px;
+            -webkit-text-stroke-color: black;
+        }
+        
+        p#front {
+            font-size: 120px;
+            color: white;
+            font-family: 'Francois One', sans-serif;
+            -webkit-text-stroke-width: 0px;
             -webkit-text-stroke-color: black;
         }
     </style>
@@ -62,14 +68,29 @@
     <script>
         let safeBorder = 100;
         let comment = function(msg) {
-            let a = $(`<p>${msg}</p>`);
+            let a = $(`<p id="back">${msg}</p>`);
+            let b = $(`<p id="front">${msg}</p>`);
+            let top = Math.random() * (window.innerHeight - safeBorder * 2)
             a.css('position', 'absolute');
             a.css('left', window.innerWidth);
-            a.css('top', Math.random() * (window.innerHeight - safeBorder * 2));
+            a.css('top', top);
             a.css('white-space', 'pre');
+
+            b.css('position', 'absolute');
+            b.css('left', window.innerWidth);
+            b.css('top', top);
+            b.css('white-space', 'pre');
+
+
             a.appendTo('body');
-            // console.log(a.height()); //71.2
+            b.appendTo('body');
+
             a.animate({
+                left: a.width() * -1
+            }, 5000, 'linear', function() {
+                a.remove()
+            });
+            b.animate({
                 left: a.width() * -1
             }, 5000, 'linear', function() {
                 a.remove()
