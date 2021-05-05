@@ -98,6 +98,7 @@
         }
         window.addEventListener("hashchange", function() {
             comment(decodeURI(location.hash.substring(1)));
+            history.pushState(null, null, ' ');
         }, false);
     </script>
 </body>
