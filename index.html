@@ -11,6 +11,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Francois+One&display=swap" rel="stylesheet">
 
     <style>
+        * {
+            box-sizing: border-box;
+            padding: 0%;
+            margin: 0%;
+        }
         body,
         html {
             height: 100%;
@@ -66,11 +71,11 @@
     </script>
 
     <script>
-        let safeBorder = 100;
+        let safeBorder = 169; //<p> height
         let comment = function(msg) {
             let a = $(`<p id="back">${msg}</p>`);
             let b = $(`<p id="front">${msg}</p>`);
-            let top = Math.random() * (window.innerHeight - safeBorder * 2)
+            let top = Math.random() * (window.innerHeight - safeBorder);
             a.css('position', 'absolute');
             a.css('left', window.innerWidth);
             a.css('top', top);
