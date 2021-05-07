@@ -71,12 +71,11 @@
     </script>
 
     <script>
-        let safeBorder = 169; //<p> height
         let comment = function(msg) {
             let a = $(`<p id="back">${msg}</p>`);
             let b = $(`<p id="front">${msg}</p>`);
-//             let top = Math.random() * (window.innerHeight - safeBorder);
-            let top = window.innerHeight - safeBorder;
+            let top = Math.random() * (window.innerHeight - 169);
+            console.log(top);
             a.css('position', 'absolute');
             a.css('left', window.innerWidth);
             a.css('top', top);
