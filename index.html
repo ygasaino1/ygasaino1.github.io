@@ -5,107 +5,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Francois+One&display=swap" rel="stylesheet">
-
+    <title>Document</title>
     <style>
         * {
             box-sizing: border-box;
             padding: 0%;
             margin: 0%;
         }
-        body,
-        html {
+        
+        html,
+        body {
             height: 100%;
             margin: 0;
             padding: 0;
-            background-color: #FFFFFF;
-            overflow: hidden;
         }
         
-        #myDiv {
-            width: 100%;
+        #mydiv {
             height: 100%;
-            background-color: black;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            overflow: hidden;
-        }
-        
-        #media-catcher {
-            height: 100%;
-            width: 100%;
-            overflow: hidden;
-        }
-        
-        p#back {
-            font-size: 120px;
-            color: white;
-            font-family: 'Francois One', sans-serif;
-            -webkit-text-stroke-width: 10px;
-            -webkit-text-stroke-color: black;
-        }
-        
-        p#front {
-            font-size: 120px;
-            color: white;
-            font-family: 'Francois One', sans-serif;
-            -webkit-text-stroke-width: 0px;
-            -webkit-text-stroke-color: black;
+            margin: 0;
+            padding: 0;
+            background-color: rgb(211, 211, 211);
+            color: rgb(245, 35, 88);
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            text-align: center;
         }
     </style>
-    <title>TK</title>
 </head>
 
 <body>
-    <div id="myDiv">
-        <iframe id=media-catcher src="" frameborder="0"></iframe>
+    <div id="mydiv" style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+        <div>
+            <div style="font-size: 230px; line-height: 150px; ">Sorry, You Need to redeliver TKMedia.</div>
+            <div style="font-size: 30px; color: rgb(168, 168, 168); "><br>You can find the link in your chat.</div>
+        </div>
     </div>
-    <script>
-        var emb = window.location.search.split('open=')[1]
-        let media = document.getElementById('media-catcher');
-        media.setAttribute('src', emb);
-    </script>
-
-    <script>
-        let comment = function(msg) {
-            let a = $(`<p id="back">${msg}</p>`);
-            let b = $(`<p id="front">${msg}</p>`);
-            let top = Math.random() * (window.innerHeight - 169);
-            console.log(top);
-            a.css('position', 'absolute');
-            a.css('left', window.innerWidth);
-            a.css('top', top);
-            a.css('white-space', 'pre');
-
-            b.css('position', 'absolute');
-            b.css('left', window.innerWidth);
-            b.css('top', top);
-            b.css('white-space', 'pre');
-
-
-            a.appendTo('body');
-            b.appendTo('body');
-
-            a.animate({
-                left: a.width() * -1
-            }, 5000, 'linear', function() {
-                a.remove()
-            });
-            b.animate({
-                left: a.width() * -1
-            }, 5000, 'linear', function() {
-                a.remove()
-            });
-        }
-        window.addEventListener("hashchange", function() {
-            comment(decodeURI(location.hash.substring(1)));
-            history.pushState(null, null, ' ');
-        }, false);
-    </script>
 </body>
 
 </html>
