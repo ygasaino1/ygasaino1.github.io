@@ -1,0 +1,63 @@
+<!-- SHOOTER BIRTHDAYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sketch</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.3.1/lib/p5.js"></script>
+    <style>
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        
+        #bg {
+            position: relative;
+            height: 100vh;
+            width: 100vw;
+        }
+        
+        #bg img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+        
+        canvas {
+            display: block;
+        }
+        
+        img {}
+        
+        p {
+            padding: 0px;
+            margin: 0px;
+            position: absolute;
+            bottom: 0px;
+            width: 100%;
+            text-align: center;
+            font-family: monospace;
+            background-color: black;
+            color: white;
+            letter-spacing: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id='bg'>
+        <img src="bg.png" alt="">
+    </div>
+    <p style="z-index: 9999; font-size: 40px;">Shooter's BirthDay</p>
+    <script src="sketch_shooter.js"></script>
+</body>
+
+</html>
