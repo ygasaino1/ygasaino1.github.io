@@ -1,0 +1,99 @@
+@import url(https://fonts.googleapis.com/css?family=Share+Tech+Mono);
+.decode-text {
+    display: block;
+    position: relative;
+    width: auto;
+    font-size: 30px;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    /* border-bottom: 2px;
+    border-bottom-color: black;
+    border-bottom-style: solid; */
+    top: 100%;
+}
+
+html,
+body {
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.space {
+    display: inline-block;
+    width: 10px;
+}
+
+.text-animation {
+    display: inline-block;
+    position: relative;
+    color: transparent;
+    text-transform: uppercase;
+}
+
+.text-animation:before {
+    content: "";
+    color: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: #0e182d;
+    width: 0;
+    height: 1.2em;
+    -webkit-transform: translate(-50%, -55%);
+    -ms-transform: translate(-50%, -55%);
+    transform: translate(-50%, -55%);
+}
+
+.text-animation.state-1:before {
+    width: 1px;
+}
+
+.text-animation.state-2:before {
+    width: 0.9em;
+}
+
+.text-animation.state-3 {
+    color: black;
+}
+
+.text-animation.state-3:before {
+    width: 0;
+}
+
+#refresh {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+}
+
+div {
+    font-family: "Share Tech Mono", monospace;
+}
+
+body {
+    position: relative;
+    height: 100vh;
+    max-width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    /* background-color: yellow; */
+}
+
+#bg {
+    position: relative;
+    top: 0px;
+    object-fit: cover;
+    height: 100%;
+    max-width: 100%;
+}
+
+.overlay {
+    position: absolute;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    top: 0px;
+    bottom: 30%;
+}
