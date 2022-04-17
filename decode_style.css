@@ -1,15 +1,21 @@
 @import url(https://fonts.googleapis.com/css?family=Share+Tech+Mono);
 .decode-text {
-    display: block;
+    display: flex;
     position: relative;
-    width: auto;
+    width: 100%;
     font-size: 30px;
-    text-align: center;
+    /* text-align: center; */
     background-color: rgb(255, 255, 255);
+    /* align-items: center; */
+    justify-content: center;
     /* border-bottom: 2px;
     border-bottom-color: black;
     border-bottom-style: solid; */
     top: 100%;
+}
+
+* {
+    margin: 2px;
 }
 
 html,
@@ -78,7 +84,6 @@ body {
     align-items: center;
     display: flex;
     justify-content: center;
-    /* background-color: yellow; */
 }
 
 #bg {
@@ -96,4 +101,12 @@ body {
     width: 100%;
     top: 0px;
     bottom: 30%;
+}
+
+.time {
+    font-size: 20px;
+    position: relative;
+    display: inline-block;
+    top: 100%;
+    color: white;
 }
