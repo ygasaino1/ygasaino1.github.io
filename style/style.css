@@ -22,7 +22,8 @@ body {
 /* ------------------------------------------ */
 
 #vid-container,
-#twitch-container {
+#twitch-container,
+#iframe-div {
     position: absolute;
     top: 0;
     bottom: 0;
